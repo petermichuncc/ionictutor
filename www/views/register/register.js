@@ -18,6 +18,11 @@ angular.module('App').controller('registerController', function($scope, $state, 
 
   $scope.register = function(user) {
     //Check if form is filled up.
+    /*
+        Send out an alert if the user is trying to sign up with an e-mail that doesn't contain @uncc
+
+    */
+    
     if (angular.isDefined(user)) {
       Utils.show();
       firebase.database().ref('accounts').orderByChild('email').equalTo(user.email).once('value').then(function(accounts) {
