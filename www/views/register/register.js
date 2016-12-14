@@ -10,7 +10,8 @@ angular.module('App').controller('registerController', function($scope, $state, 
       name: '',
       email: '',
       password: '',
-      profilePic: 'img/profile.png'
+      profilePic: 'img/profile.png',
+      accounttype: ''
     };
 
     $scope.profilePic = 'img/profile.png';
@@ -44,7 +45,8 @@ angular.module('App').controller('registerController', function($scope, $state, 
                     email: user.email,
                     userId: firebase.auth().currentUser.uid,
                     dateCreated: Date(),
-                    provider: 'Firebase'
+                    provider: 'Firebase',
+                    accounttype:user.accounttype
                   }).then(function(response) {
                     //Account created successfully, logging user in automatically after a short delay.
                     Utils.message(Popup.successIcon, Popup.accountCreateSuccess)
@@ -58,6 +60,7 @@ angular.module('App').controller('registerController', function($scope, $state, 
                     $localStorage.loginProvider = "Firebase";
                     $localStorage.email = user.email;
                     $localStorage.password = user.password;
+                    $localStorage.accounttype = user.accounttype;
                   });
                 })
                 .catch(function(error) {

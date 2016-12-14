@@ -21,16 +21,16 @@
             <span class="input-label profile-inline-icon"><i class="icon ion-calendar calm"></i></span>
             <input disabled class="disabled-input-style" name="name" type="text" ng-model="profile.date" placeholder="Member Since">
           </label>
-          <label class="item item-input clear-border margin-bottom-10">
+        <label class="item item-input clear-border margin-bottom-10">
             <span class="input-label profile-inline-icon"><i class="icon ion-link balanced"></i></span>
-            <input disabled class="disabled-input-style" name="name" type="text" ng-model="profile.provider" placeholder="Provider">
+            <input disabled class="disabled-input-style" name="name" type="text" ng-model="profile.accounttype" placeholder="Account type">
           </label>
         </div>
       </div>
     </div>
     <div class="button-bar">
-      <button class="button button-block button-balanced profile-button" ng-click="changeTab('messages', 0)"><i class="icon ion-chatbox"></i>&nbsp;&nbsp;<b>Messages</b></button>
-      <button class="button button-block button-energized profile-button" ng-click="changeTab('groups', 1)"><i class="icon ion-chatboxes"></i>&nbsp;&nbsp;<b>Groups</b></button>
+      <button class="button button-block button-balanced profile-button" ng-click="changeTab('messages', 0)"><i class="icon ion-chatbubble"></i>&nbsp;&nbsp;<b>Messages</b></button>
+      <button class="button button-block button-energized profile-button" ng-click="changeTab('groups', 1)"><i class="icon ion-chatbubbles"></i>&nbsp;&nbsp;<b>Groups</b></button>
     </div>
     <div class="button-bar">
       <button class="button button-block button-assertive profile-button" ng-click="changeTab('friends', 2)"><i class="icon ion-ios-people"></i>&nbsp;&nbsp;<b>Friends</b></button>

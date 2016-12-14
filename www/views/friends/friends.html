@@ -4,12 +4,12 @@
   </ion-header-bar>
   <ion-content class="has-footer">
     <div class="button-bar margin-top-10 margin-bottom-10" ng-show="mode == 'Friends'">
-      <button class="button button-block button-clear button-energized" ng-click="mode = 'Friends'">Friends</button>
-      <button class="button button-block button-energized" ng-click="mode = 'Requests'">Requests</button>
+      <button class="button button-block button-clear button-balanced" ng-click="mode = 'Friends'">Friends</button>
+      <button class="button button-block button-balanced" ng-click="mode = 'Requests'">Requests</button>
     </div>
     <div class="button-bar margin-top-10 margin-bottom-10" ng-show="mode == 'Requests'">
-      <button class="button button-block button-energized" ng-click="mode = 'Friends'">Friends</button>
-      <button class="button button-block button-clear button-energized" ng-click="mode = 'Requests'">Requests</button>
+      <button class="button button-block button-balanced" ng-click="mode = 'Friends'">Friends</button>
+      <button class="button button-block button-clear button-balanced" ng-click="mode = 'Requests'">Requests</button>
     </div>
     <!--  Requests Tab -->
     <div ng-show="mode == 'Requests'">
@@ -53,7 +53,7 @@
         </div>
         <div class="col col-25 clear-padding-margin">
           <div class="button-bar margin-left20">
-          <button class="button button-clear button-energized" ng-click="searchUser = undefined"><i class="icon ion-android-close"></i></button>
+          <button class="button button-clear button-balanced" ng-click="searchUser = undefined"><i class="icon ion-android-close"></i></button>
         </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
         </div>
         <div class="col col-25 clear-padding-margin">
           <div class="button-bar margin-top10 margin-left20">
-            <button class="button button-clear button-energized" ng-click="sendRequest(user)"><i class="icon ion-person-add"></i></button>
+            <button class="button button-clear button-balanced" ng-click="sendRequest(user)"><i class="icon ion-person-add"></i></button>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
         </div>
         <div class="col col-25 clear-padding-margin">
           <div class="button-bar margin-left20">
-            <button class="button button-clear button-energized" ng-click="friendSearch = undefined"><i class="icon ion-android-close"></i></button>
+            <button class="button button-clear button-balanced" ng-click="friendSearch = undefined"><i class="icon ion-android-close"></i></button>
           </div>
         </div>
       </div>

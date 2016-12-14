@@ -3,8 +3,8 @@
 <ion-view hide-back-button="true" hide-nav-bar="true">
   <ion-content class="padding">
     <div class="list text-center padding">
-      <img class="logo margin-top0" ng-src="img/logo.png">
-      <h2><span class="bold energized">Ahoy Mate!</span></h2>
+      <img class="logo margin-top0" style="width: 30%; height: 30%;" ng-src="img/logo.png">
+      <h2><span class="bold energized">Hey!</span></h2>
       <h4 class="line-height-160">We're so glad to have you join us!</h4>
       <img class="profilePic margin-top0" style="width: 96px; height: 96px;" ng-src="{{profilePic}}">
     </div>
@@ -26,11 +26,22 @@
           <span class="input-label font-bold">Password</span>
           <input name="password" type="password" ng-model="user.password" placeholder="Password" ng-minlength="5" ng-maxlength="30" required>
         </label>
+         <label class="item item-input item-clear">
+    <div class="input-label">
+       <span class="input-label font-bold">Tutor</span>
+    </div>
+    <select name="accounttype" type="accounttype" ng-model="user.accounttype">
+      <option value="Tutor">Yes</option>
+      <option value="Student">No</option>
+      
+    </select>
+  </label>
       </div>
     </form>
+
     <div class="button-bar margin-top-10">
       <button class="button button-block button-dark" ng-click="back()">Back to Login</button>
-      <button class="button button-block button-energized" ng-click="register(user)" ng-disabled="registerForm.$invalid">Register</button>
+      <button class="button button-block button-balanced" ng-click="register(user)" ng-disabled="registerForm.$invalid">Register</button>
     </div>
   </ion-content>
 </ion-view>
