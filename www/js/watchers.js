@@ -36,7 +36,8 @@ angular.module('App').factory('Watchers', function($localStorage, $filter, $time
           username: account.val().username,
           profilePic: account.val().profilePic,
           date: $filter('date')(new Date(account.val().dateCreated), 'MMM dd, yyyy'),
-          provider: account.val().provider
+          provider: account.val().provider,
+          accounttype:account.val().accounttype
         };
         $timeout(function() {
 
@@ -61,7 +62,8 @@ angular.module('App').factory('Watchers', function($localStorage, $filter, $time
           username: account.val().username,
           profilePic: account.val().profilePic,
           date: $filter('date')(new Date(account.val().dateCreated), 'MMM dd, yyyy'),
-          provider: account.val().provider
+          provider: account.val().provider,
+          accounttype:account.val().accounttype
         };
         $timeout(function() {
 
