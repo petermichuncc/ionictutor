@@ -5,8 +5,14 @@
   <ion-content class="padding has-footer">
     <div class="row">
       <div class="col col-50">
+      <!-- Change profile image if tutor-->
+      <div ng-if="profile.accounttype == 'Student">
         <img ng-src="{{profile.profilePic}}" id="profilePic" class="profileProfilePic" imageonload="constrainProportion()" ng-click="changeProfilePic()"/>
       </div>
+       <div ng-if="profile.accounttype == 'Tutor'">
+        <img ng-src="{{profile.profilePic}}" id="profilePic" class="profileProfilePic tutor" imageonload="constrainProportion()" ng-click="changeProfilePic()"/>
+      </div>
+       </div>
       <div class="col col-50">
         <div class="list">
           <label class="item item-input clear-border margin-bottom-10">
@@ -22,13 +28,18 @@
             <input disabled class="disabled-input-style" name="name" type="text" ng-model="profile.date" placeholder="Member Since">
           </label>
         <label class="item item-input clear-border margin-bottom-10">
-            <span class="input-label profile-inline-icon"><i class="icon ion-link balanced"></i></span>
+            <span class="input-label profile-inline-icon">
+              <div ng-if="profile.accounttype == 'Tutor'"><i class="icon ion-star balanced"></i> </div>
+              <div ng-if="profile.accounttype == 'Student'"><i class="icon ion-android-checkmark-circle balanced"></i> </div>
+              </span>
             <input disabled class="disabled-input-style" name="name" type="text" ng-model="profile.accounttype" placeholder="Account type">
           </label>
         </div>
       </div>
     </div>
-    <div class="button-bar">
+  
+   
+    <div class="button-bar" >
       <button class="button button-block button-balanced profile-button" ng-click="changeTab('messages', 0)"><i class="icon ion-chatbubble"></i>&nbsp;&nbsp;<b>Messages</b></button>
       <button class="button button-block button-energized profile-button" ng-click="changeTab('groups', 1)"><i class="icon ion-chatbubbles"></i>&nbsp;&nbsp;<b>Groups</b></button>
     </div>

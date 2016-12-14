@@ -10,6 +10,11 @@
 .item-clear {
   border: 0px;
 }
+.tutor
+{
+   border: 1px solid yellow;
+    border-radius: 12px;
+}
 .button {
   border-radius: 5px;
 }
